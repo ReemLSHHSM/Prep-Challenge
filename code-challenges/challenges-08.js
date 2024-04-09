@@ -108,17 +108,17 @@ const getInfo = (arr) => {
   let coursesName = [];
   let studentsName = [];
   // write your code here
-    for(let i=0;i<courses.length;i++){
-      for(let name in arr[i]){
-           if(name=='course'){
-            coursesName.push(arr[i].name);
-
-           }
-           else if(name=='Students'){
-            studentsName.push(arr[i].name);
-           }
+    for(let i=0;i<arr.length;i++){
+          coursesName.push(arr[i].course);
+        
+        for (let j = 0; j < arr[i].Students.length; j++){
+          studentsName.push(arr[i].Students[j]);
+          
+        
+        }
       }
-    }
+      
+    
   return { coursesName, studentsName };
 };
 // -------------------------------------------------------------------------------------------------------
@@ -142,6 +142,7 @@ const getInfo = (arr) => {
 
 const getStudents = (arr) => {
   // write your code here
+  return arr[1];
 };
 //  ------------------------------------------------------------------------------------------------------
 
