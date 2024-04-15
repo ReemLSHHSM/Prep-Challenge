@@ -21,10 +21,9 @@
 const arrInc = (arr) => {
     let result = [];
     // write your code here
-    for(let num of arr){
-        num+=10;
-        result.push(num);
-    }
+    arr.forEach(element => {
+        result.push(element+10);
+    });
     return result;
 }
 // -------------------------------------------------------------------------------------------------------
@@ -43,10 +42,12 @@ const arrInc = (arr) => {
 // 
 const roundDecimals = (arr) => {
     // write your code here
-    let index=0;
-    for(let num of arr){
-        arr[index++]=Math.round(num);
-    }
+    
+    
+        arr.forEach((element, index )=>{
+           arr[index]=Math.round(element);
+        })
+    
     return arr;
 }
 // -------------------------------------------------------------------------------------------------------
@@ -116,14 +117,13 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-    for (let employee of arr) {
+    arr.forEach((employee,index) => {
         if (employee.workHours > 8) {
-            employee.salary = parseInt(employee.salary) + 100+'$';
+            arr[index].salary= parseInt(employee.salary) + 100 + '$';
         } else {
-            employee.salary = parseInt(employee.salary) + 50+'$';
+            arr[index].salary = parseInt(employee.salary) + 50 + '$';
         }
-       
-    }
+    });
     return arr;
 }
 
