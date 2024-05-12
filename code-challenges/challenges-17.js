@@ -15,10 +15,20 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    if (int1 < 0) {
-        return [int1];
-      }
-      return [int1].concat(recursionPattern(int1 - int2, int2)).concat([int1]);
+    const result = [];
+
+    const generatePattern = (num) => {
+        if (num < 0) {
+            result.push(num);
+        } else {
+            result.push(num);
+            generatePattern(num - int2);
+            result.push(num);
+        }
+    };
+
+    generatePattern(int1);
+    return result;
 }
 
 // -------------------------------------------------------------------------------------------------------
