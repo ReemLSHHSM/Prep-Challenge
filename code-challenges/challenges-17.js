@@ -19,7 +19,7 @@ const recursionPattern = (int1, int2) => {
         return [int1];
       }
       return [int1].concat(recursionPattern(int1 - int2, int2)).concat([int1]);
-}
+ }
 
 // -------------------------------------------------------------------------------------------------------
 
